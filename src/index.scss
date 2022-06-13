@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400');
+
+/**
+==========
+Variables
+==========
+**/
+
+// Color Variables
+$primary-color: #41228e;
+$secondary-color: #2bfdff;
+$text-color: #4c4c4c;
+$text-color-dark: #000;
+$text-color-light: #999999;
+$body-color: #fff;
+$border-color: #c7c7c7;
+$black: #000;
+$white: #fff;
+$gray: #eaeaea;
+
+// Font Variables
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Playfair Display', serif;
+$icon-font: 'themify';
+
+/**
+==========
+Mixins
+==========
+**/
+
+@mixin mobile-xs{
+  @media(max-width:400px){
+    @content;
+  }
+}
+@mixin mobile{
+  @media(max-width:575px){
+    @content;
+  }
+}
+@mixin tablet{
+  @media(max-width:767px){
+    @content;
+  }
+}
+@mixin desktop{
+  @media(max-width:991px){
+    @content;
+  }
+}
+@mixin desktop-lg{
+  @media(max-width:1200px){
+    @content;
+  }
+}
+
+@mixin size($size){
+  width: $size; height: $size;
+}
+
+/**
+==========
+Common
+==========
+**/
+body {
+  background-color: $body-color;
+  overflow-x: hidden;
+  line-height: 1.2;
+  font-family: $primary-font;
+  -webkit-font-smoothing: antialiased;
+  font-size: 15px;
+  color: $text-color;
+}
+
+::selection {
+  background: lighten($color: $primary-color, $amount: 10);
+  color: $white;
+}
+
+p, .paragraph {
+  font-weight: 400;
+  color: $text-color;
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: $primary-font;
+  &-lg{
+    font-size: 22px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: $text-color-dark;
+  font-family: $secondary-font;
+  line-height: 1.2;
+}
+
+h1, .h1{
+  font-size: 80px;
+  @include desktop {
+    font-size: 65px;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin: 0px;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+a,
+button,
+select {
+  cursor: pointer;
+  transition: .2s ease;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+a.text-dark{
+  &:hover{
+    color: $primary-color !important;
+  }
+}
+
+a:hover {
+  color: $primary-color;
+}
+
+.slick-slide {
+  outline: 0;
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  &-title {
+    margin-bottom: 80px;
+    font-family: $secondary-font;
+  }
+}
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+/* overlay */
+
+.overlay {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: $black;
+    opacity: .5;
+  }
+}
+
+.outline-0 {
+  outline: 0 !important;
+}
+
+.d-unset {
+  display: unset !important;
+}
+
+.bg-primary {
+  background: $primary-color !important;
+}
+
+.bg-gray{
+  background: $gray !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.text-color {
+  color: $text-color;
+}
+
+.text-dark {
+  color: $text-color-dark !important;
+}
+
+.text-light {
+  color: $text-color-light !important;
+}
+
+.mb-10 {
+  margin-bottom: 10px !important;
+}
+
+.mb-20 {
+  margin-bottom: 20px !important;
+}
+
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+.mb-40 {
+  margin-bottom: 40px !important;
+}
+
+.mb-50 {
+  margin-bottom: 50px !important;
+}
+
+.mb-60 {
+  margin-bottom: 60px !important;
+}
+
+.mb-70 {
+  margin-bottom: 70px !important;
+}
+
+.mb-80 {
+  margin-bottom: 80px !important;
+}
+
+.mb-90 {
+  margin-bottom: 90px !important;
+}
+
+.mb-100 {
+  margin-bottom: 100px !important;
+}
+
+.zindex-1 {
+  z-index: 1;
+}
+
+.rounded-lg{
+  border-radius: 15px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.font-secondary {
+  font-family: $secondary-font !important;
+}
+
+.font-tertiary {
+  font-family: $secondary-font !important;
+}
+
+.shadow {
+  box-shadow: 0px 18px 39.1px 6.9px rgba(224, 241, 255, 0.34) !important;
+}
+
+.bg-dark{
+  background-color: #222222 !important;
+}
+
+/* icon */
+.icon {
+  font-size: 45px;
+}
+
+.icon-bg {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.icon-light {
+  color: #c8d5ef;
+}
+
+/* /icon */
+
+/* slick slider */
+.slick-dots{
+  text-align: center;
+  padding-left: 0;
+  li{
+    display: inline-block;
+    margin: 2px;
+    &.slick-active{
+      button{
+        background: $white;
+        width: 25px;
+      }
+    }
+    button{
+      height: 6px;
+      width: 12px;
+      background: rgba($color: $white, $alpha: .5);
+      color: transparent;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: .2s ease;
+      border: 0;
+    }
+  }
+}
+/* /slick slider */
+
+/* form */
+.form-control{
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid $border-color;
+  height: 60px;
+  &:focus{
+    border-color: $primary-color;
+    outline: 0;
+    box-shadow: none !important;
+  }
+}
+
+textarea.form-control{
+  height: 120px;
+}
+/* /form */
+
+/* card */
+.card{
+  border: 0;
+  &-header{
+    border: 0;
+  }
+  &-footer{
+    border: 0;
+  }
+}
+
+
+
+
+/* Button style */
+.btn {
+  font-size: 22px;
+  font-family: $secondary-font;
+  text-transform: capitalize;
+  padding: 16px 44px;
+  border-radius: 5px;
+  font-weight: 600;
+  border: 0;
+  position: relative;
+  z-index: 1;
+  transition: .2s ease;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none !important;
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &-sm {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+
+  &-xs {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+}
+
+.btn-primary {
+  background: $primary-color;
+  color: $white;
+
+  &:active {
+    background: lighten($color: $primary-color, $amount: 10) !important;
+  }
+
+  &:hover {
+    background: lighten($color: $primary-color, $amount: 10);
+  }
+
+  &.focus,
+  &.active {
+    background: lighten($color: $primary-color, $amount: 10) !important;
+    box-shadow: none !important;
+  }
+}
+
+
+.btn-transparent {
+  background: transparent;
+  color: $primary-color;
+  font-weight: bold;
+
+  &:active,
+  &:hover {
+    color: $primary-color;
+  }
+}
