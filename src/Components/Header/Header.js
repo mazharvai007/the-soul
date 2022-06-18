@@ -61,7 +61,7 @@ function Header() {
 
 	return (
 		<>
-			<AppBar position='fixed'>
+			<AppBar position='fixed' sx={{ boxShadow: 'none' }}>
 				<Container>
 					<Toolbar
 						disableGutters
