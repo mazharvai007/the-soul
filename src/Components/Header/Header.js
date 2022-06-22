@@ -12,6 +12,7 @@ import {
 	Toolbar,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import useScrollTrigger from '@mui/material/useScrollTrigger';
 import styled from '@emotion/styled';
 import { theme } from '../../theme';
 
@@ -59,59 +60,81 @@ function Header() {
 		img: { width: '100px' },
 	});
 
+	const ElevationScroll = (props) => {
+		const { children, window } = props;
+		const trigger = useScrollTrigger({
+			disableHysteresis: true,
+			threshold: 0,
+			target: window ? window() : undefined,
+		});
+		return React.cloneElement(children, {
+			elevation: trigger ? 4 : 0,
+		});
+	};
+
 	return (
 		<>
-			<AppBar position='fixed' sx={{ boxShadow: 'none' }}>
-				<Container>
-					<Toolbar
-						disableGutters
-						sx={{
-							display: 'flex',
-							justifyContent: 'space-between',
-						}}>
-						<Logo variant='h6' component='a' href='/'>
-							<img src='images/logo.png' alt='the soul' />
-						</Logo>
-						{['left'].map((item) => (
-							<Box
-								key={item}
-								sx={{
-									display: { xs: 'flex', md: 'none' },
-								}}>
-								<IconButton
-									size='large'
-									color='inherit'
-									onClick={toggleDrawer(item, true)}>
-									<MenuIcon />
-								</IconButton>
-								<SwipeableDrawer
-									anchor={item}
-									open={state[item]}
-									onClose={toggleDrawer(item, false)}
-									onOpen={toggleDrawer(item, true)}>
-									{menuList(item)}
-								</SwipeableDrawer>
+			<ElevationScroll>
+				<AppBar
+					position='fixed'
+					sx={{
+						boxShadow: 'none',
+						paddingTop: '40px',
+						paddingBottom: '40px',
+						transition: '.3s ease',
+					}}>
+					<Container>
+						<Toolbar
+							disableGutters
+							sx={{
+								display: 'flex',
+								justifyContent: 'space-between',
+							}}>
+							<Logo variant='h6' component='a' href='/'>
+								<img src='images/logo.png' alt='the soul' />
+							</Logo>
+							{['left'].map((item) => (
+								<Box
+									key={item}
+									sx={{
+										display: { xs: 'flex', md: 'none' },
+									}}>
+									<IconButton
+										size='large'
+										color='inherit'
+										onClick={toggleDrawer(item, true)}>
+										<MenuIcon />
+									</IconButton>
+									<SwipeableDrawer
+										anchor={item}
+										open={state[item]}
+										onClose={toggleDrawer(item, false)}
+										onOpen={toggleDrawer(item, true)}>
+										{menuList(item)}
+									</SwipeableDrawer>
+								</Box>
+							))}
+							<Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+								<MenuList>
+									{pages.map((page) => (
+										<MenuItem key={page}>
+											<Link
+												href='#'
+												color={
+													theme.palette.textColor
+														.white
+												}
+												underline='none'>
+												{page}
+											</Link>
+										</MenuItem>
+									))}
+								</MenuList>
 							</Box>
-						))}
-						<Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-							<MenuList>
-								{pages.map((page) => (
-									<MenuItem key={page}>
-										<Link
-											href='#'
-											color={
-												theme.palette.textColor.white
-											}
-											underline='none'>
-											{page}
-										</Link>
-									</MenuItem>
-								))}
-							</MenuList>
-						</Box>
-					</Toolbar>
-				</Container>
-			</AppBar>
+						</Toolbar>
+					</Container>
+				</AppBar>
+			</ElevationScroll>
 		</>
 	);
 }
