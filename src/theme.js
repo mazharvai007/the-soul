@@ -24,43 +24,43 @@ export const theme = createTheme({
 		body1: {
 			lineHeight: 1.2,
 			fontSize: '15px',
-			fontFamily: 'Roboto',
+			fontFamily: 'Roboto, sans-serif',
 		},
 		body2: {
 			fontWeight: 400,
 			fontSize: '15px',
 			lineHeight: 1.8,
-			fontFamily: 'Roboto',
+			fontFamily: 'Roboto, sans-serif',
 		},
 		h1: {
 			lineHeight: 1.2,
 			fontSize: '80px',
-			fontFamily: 'Playfair Display',
+			fontFamily: 'Playfair Display, serif',
 		},
 		h2: {
 			lineHeight: 1.2,
 			fontSize: '60px',
-			fontFamily: 'Playfair Display',
+			fontFamily: 'Playfair Display, serif',
 		},
 		h3: {
 			lineHeight: 1.2,
 			fontSize: '40px',
-			fontFamily: 'Playfair Display',
+			fontFamily: 'Playfair Display, serif',
 		},
 		h4: {
 			lineHeight: 1.2,
 			fontSize: '22px',
-			fontFamily: 'Playfair Display',
+			fontFamily: 'Playfair Display, serif',
 		},
 		h5: {
 			lineHeight: 1.2,
 			fontSize: '18px',
-			fontFamily: 'Playfair Display',
+			fontFamily: 'Playfair Display, serif',
 		},
 		h6: {
 			lineHeight: 1.2,
 			fontSize: '14px',
-			fontFamily: 'Playfair Display',
+			fontFamily: 'Playfair Display, serif',
 		},
 	},
 	breakpoints: {

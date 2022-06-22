@@ -42,7 +42,19 @@ function Header() {
 			<List>
 				{pages.map((page) => (
 					<ListItem key={page}>
-						<Link href='#' underline='none'>
+						<Link
+							href='#'
+							underline='none'
+							variant='h6'
+							sx={{
+								textTransform: 'uppercase',
+								fontSize: '15px',
+								fontWeight: '700',
+								transition: '0.2s ease',
+								':hover': {
+									color: 'rgba(255,255,255,.5)',
+								},
+							}}>
 							{page}
 						</Link>
 					</ListItem>
@@ -132,7 +144,17 @@ function Header() {
 											color={
 												theme.palette.textColor.white
 											}
-											underline='none'>
+											underline='none'
+											variant='h6'
+											sx={{
+												textTransform: 'uppercase',
+												fontSize: '15px',
+												fontWeight: '700',
+												transition: '0.2s ease',
+												':hover': {
+													color: 'rgba(255,255,255,.5)',
+												},
+											}}>
 											{page}
 										</Link>
 									</MenuItem>
