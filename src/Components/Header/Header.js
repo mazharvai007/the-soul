@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import {
 	AppBar,
 	Box,
-	Container,
 	IconButton,
 	Link,
 	List,
@@ -43,7 +42,19 @@ function Header() {
 			<List>
 				{pages.map((page) => (
 					<ListItem key={page}>
-						<Link href='#' underline='none'>
+						<Link
+							href='#'
+							underline='none'
+							variant='h6'
+							sx={{
+								textTransform: 'uppercase',
+								fontSize: '15px',
+								fontWeight: '700',
+								transition: '0.2s ease',
+								':hover': {
+									color: 'rgba(255,255,255,.5)',
+								},
+							}}>
 							{page}
 						</Link>
 					</ListItem>
@@ -63,10 +74,16 @@ function Header() {
 	const ElevationScroll = (props) => {
 		const { children, window } = props;
 		const trigger = useScrollTrigger({
-			disableHysteresis: true,
-			threshold: 0,
+			// disableHysteresis: true,
+			// threshold: 0,
 			target: window ? window() : undefined,
 		});
+		console.log(trigger);
+		if (trigger === true) {
+			document
+				.querySelector('header.MuiAppBar-root')
+				.classList.add('mainNav');
+		}
 		return React.cloneElement(children, {
 			elevation: trigger ? 4 : 0,
 		});
@@ -81,68 +98,60 @@ function Header() {
 						boxShadow: 'none',
 						paddingTop: '40px',
 						paddingBottom: '40px',
+						paddingLeft: '130px',
+						paddingRight: '130px',
 						transition: '.3s ease',
+						'&.mainNav': {
+							padding: '15px 100px',
+						},
 					}}>
-					<Container>
-						<Toolbar
-							disableGutters
-							sx={{
-								display: 'flex',
-								justifyContent: 'space-between',
-							}}>
-							<Logo variant='h6' component='a' href='/'>
-								<img src='images/logo.png' alt='the soul' />
-							</Logo>
-							{['left'].map((item) => (
-								<Box
-									key={item}
-									sx={{
-										display: { xs: 'flex', md: 'none' },
-									}}>
-									<IconButton
-										size='large'
-										color='inherit'
-										onClick={toggleDrawer(item, true)}>
-										<MenuIcon />
-									</IconButton>
-									<SwipeableDrawer
-										anchor={item}
-										open={state[item]}
-										onClose={toggleDrawer(item, false)}
-										onOpen={toggleDrawer(item, true)}>
-										{menuList(item)}
-									</SwipeableDrawer>
-								</Box>
-							))}
-							<Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-								<MenuList>
-									{pages.map((page) => (
-										<MenuItem key={page}>
-											<Link
-												href='#'
-												variant='h6'
-												sx={{
-													textTransform: 'uppercase',
-													fontSize: '15px',
-													fontWeight: '700',
-													transition: '0.2s ease',
-													':hover': {
-														color: 'rgba(255,255,255,.5)',
-													},
-												}}
-												color={
-													theme.palette.textColor
-														.white
-												}
-												underline='none'>
-												{page}
-											</Link>
-										</MenuItem>
-									))}
-								</MenuList>
+					<Toolbar
+						disableGutters
+						sx={{
+							display: 'flex',
+							justifyContent: 'space-between',
+						}}>
+						<Logo variant='h6' component='a' href='/'>
+							<img src='images/logo.png' alt='the soul' />
+						</Logo>
+						{['left'].map((item) => (
+							<Box
+								key={item}
+								sx={{
+									display: { xs: 'flex', md: 'none' },
+								}}>
+								<IconButton
+									size='large'
+									color='inherit'
+									onClick={toggleDrawer(item, true)}>
+									<MenuIcon />
+								</IconButton>
+								<SwipeableDrawer
+									anchor={item}
+									open={state[item]}
+									onClose={toggleDrawer(item, false)}
+									onOpen={toggleDrawer(item, true)}>
+									{menuList(item)}
+								</SwipeableDrawer>
 							</Box>
-						</Toolbar>
-					</Container>
+						))}
+						<Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+							<MenuList>
+								{pages.map((page) => (
+									<MenuItem key={page}>
+										<Link
+											href='#'
+											color={
+												theme.palette.textColor.white
+											}
+											underline='none'>
+											{page}
+										</Link>
+									</MenuItem>
+								))}
+							</MenuList>
+						</Box>
+					</Toolbar>
 				</AppBar>
 			</ElevationScroll>
 		</>
