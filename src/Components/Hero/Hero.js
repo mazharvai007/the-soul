@@ -100,7 +100,7 @@ function Hero() {
 							variant='h1'
 							component='h1'
 							fontWeight={700}
-							color={theme.palette.textColor.white}
+							color={theme.palette.text.white}
 							sx={{
 								whiteSpace: 'pre-line',
 								position: 'relative',

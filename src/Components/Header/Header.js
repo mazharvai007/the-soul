@@ -141,9 +141,7 @@ function Header() {
 									<MenuItem key={page}>
 										<Link
 											href='#'
-											color={
-												theme.palette.textColor.white
-											}
+											color={theme.palette.text.white}
 											underline='none'
 											variant='h6'
 											sx={{
