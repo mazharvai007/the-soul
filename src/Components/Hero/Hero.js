@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
 import { Box, Container, Typography } from '@mui/material';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import React from 'react';
 import { theme } from '../../theme';
 import './Hero.css';
@@ -13,6 +17,21 @@ const ImageLayer = styled.div({
 const SingleImage = styled.div({
 	position: 'absolute',
 	zIndex: 1,
+});
+
+const SocialIconList = styled.div({
+	position: 'relative',
+	display: 'flex',
+	flexFlow: 'column wrap',
+	gap: '10px',
+	marginLeft: '48px',
+	marginTop: '15px',
+	'.MuiTypography-root': {
+		width: 'fit-content',
+	},
+	'.MuiSvgIcon-root > path': {
+		fill: '#fff',
+	},
 });
 
 const imageItemList = [
@@ -67,10 +86,16 @@ function Hero() {
 					position: 'relative',
 					padding: '300px 0 200px',
 					backgroundColor: 'primary.main',
-					// overflow: 'hidden',
+					overflow: 'hidden',
 				}}>
 				<Container>
-					<Box>
+					<Box
+						sx={{
+							maxWidth: '90%',
+							margin: 'auto',
+							paddingLeft: '15px',
+							paddingRight: '15px',
+						}}>
 						<Typography
 							variant='h1'
 							component='h1'
@@ -99,6 +124,21 @@ function Hero() {
 						<img src={item.img} alt={item.title} />
 					</SingleImage>
 				))}
+
+				<SocialIconList>
+					<Typography component='a' href='#'>
+						<FacebookIcon fontSize='small' />
+					</Typography>
+					<Typography component='a' href='#'>
+						<TwitterIcon fontSize='small' />
+					</Typography>
+					<Typography component='a' href='#'>
+						<InstagramIcon fontSize='small' />
+					</Typography>
+					<Typography component='a' href='#'>
+						<YouTubeIcon fontSize='small' />
+					</Typography>
+				</SocialIconList>
 			</Box>
 		</>
 	);
