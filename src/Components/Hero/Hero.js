@@ -67,7 +67,7 @@ function Hero() {
 					position: 'relative',
 					padding: '300px 0 200px',
 					backgroundColor: 'primary.main',
-					overflow: 'hidden',
+					// overflow: 'hidden',
 				}}>
 				<Container>
 					<Box>
@@ -81,7 +81,7 @@ function Hero() {
 								position: 'relative',
 								zIndex: 2,
 							}}>
-							{`Hi! I'am \n Christoher \n UX designer`}
+							{`Hi! I'am \n Charlotte \n UX designer`}
 						</Typography>
 					</Box>
 				</Container>
