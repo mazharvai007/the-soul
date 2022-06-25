@@ -78,7 +78,7 @@ function Header() {
 			// threshold: 0,
 			target: window ? window() : undefined,
 		});
-		console.log(trigger);
+
 		if (trigger === true) {
 			document
 				.querySelector('header.MuiAppBar-root')
