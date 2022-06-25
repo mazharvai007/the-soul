@@ -14,7 +14,7 @@ function About() {
 						<Typography
 							component='p'
 							variant='h4'
-							color={theme.palette.textColor.dark}
+							color={theme.palette.text.dark}
 							sx={{
 								textAlign: 'center',
 								fontWeight: 'bold',
@@ -34,6 +34,7 @@ function About() {
 							component='a'
 							size='large'
 							href='#'
+							color={theme.palette.text.primary}
 							sx={{
 								textAlign: 'center',
 								padding: '16px 44px',
