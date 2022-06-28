@@ -2,6 +2,7 @@ import { CssBaseline } from '@mui/material';
 import About from './Components/About/About';
 import Header from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
+import Skills from './Components/Skills/Skills';
 
 function App() {
 	return (
@@ -10,6 +11,7 @@ function App() {
 			<Header />
 			<Hero />
 			<About />
+			<Skills />
 		</div>
 	);
 }
