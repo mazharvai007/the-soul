@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
 	Box,
 	Card,
@@ -11,19 +11,20 @@ import {
 import { theme } from '../../theme';
 import './Skills.css';
 
-const dataColor = document.querySelectorAll('.progressWrapper');
-dataColor.forEach((item) => {
-	const colorSelector = item.getAttribute('data-color');
-	item.style.backgroundColor = colorSelector;
-});
-
-const dataProgress = document.querySelectorAll('.wave');
-dataProgress.forEach((item) => {
-	const progressSelector = item.getAttribute('data-progress');
-	item.style.bottom = progressSelector;
-});
-
 function Skills() {
+	useEffect(() => {
+		const getDataColor = document.querySelectorAll('.progressWrapper');
+		getDataColor.forEach((item) => {
+			const colorSelector = item.getAttribute('datacolor');
+			item.style.backgroundColor = colorSelector;
+		});
+
+		const getDataProgress = document.querySelectorAll('.wave');
+		getDataProgress.forEach((item) => {
+			const progressSelector = item.getAttribute('dataprogressbar');
+			item.style.bottom = progressSelector;
+		});
+	});
 	return (
 		<>
 			<Box container sx={{ paddingTop: '80px', paddingBottom: '80px' }}>
@@ -52,12 +53,12 @@ function Skills() {
 								}}>
 								<CardMedia
 									className='progressWrapper'
-									data-color='#fdb157'
+									datacolor='#fdb157'
 									sx={{ position: 'relative' }}>
 									<Typography
 										component='div'
 										className='wave'
-										data-progress='90%'></Typography>
+										dataprogressbar='90%'></Typography>
 								</CardMedia>
 								<CardContent>
 									<Typography
@@ -81,12 +82,12 @@ function Skills() {
 								}}>
 								<CardMedia
 									className='progressWrapper'
-									data-color='#9473e6'
+									datacolor='#9473e6'
 									sx={{ position: 'relative' }}>
 									<Typography
 										component='div'
 										className='wave'
-										data-progress='60%'></Typography>
+										dataprogressbar='60%'></Typography>
 								</CardMedia>
 								<CardContent>
 									<Typography
@@ -110,12 +111,12 @@ function Skills() {
 								}}>
 								<CardMedia
 									className='progressWrapper'
-									data-color='#bdecf6'
+									datacolor='#bdecf6'
 									sx={{ position: 'relative' }}>
 									<Typography
 										component='div'
 										className='wave'
-										data-progress='80%'></Typography>
+										dataprogressbar='80%'></Typography>
 								</CardMedia>
 								<CardContent>
 									<Typography
@@ -139,12 +140,12 @@ function Skills() {
 								}}>
 								<CardMedia
 									className='progressWrapper'
-									data-color='#ffbcaa'
+									datacolor='#ffbcaa'
 									sx={{ position: 'relative' }}>
 									<Typography
 										component='div'
 										className='wave'
-										data-progress='70%'></Typography>
+										dataprogressbar='70%'></Typography>
 								</CardMedia>
 								<CardContent>
 									<Typography
