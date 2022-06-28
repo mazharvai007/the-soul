@@ -11,6 +11,33 @@ import {
 import { theme } from '../../theme';
 import './Skills.css';
 
+const skillsData = [
+	{
+		id: 1,
+		color: '#fdb157',
+		progress: '90%',
+		title: 'Web Design (90%)',
+	},
+	{
+		id: 2,
+		color: '#9473e6',
+		progress: '60%',
+		title: 'Logo Design (60%)',
+	},
+	{
+		id: 3,
+		color: '#bdecf6',
+		progress: '80%',
+		title: 'After Effects (80%)',
+	},
+	{
+		id: 4,
+		color: '#ffbcaa',
+		progress: '70%',
+		title: 'Web App (70%)',
+	},
+];
+
 function Skills() {
 	useEffect(() => {
 		const getDataColor = document.querySelectorAll('.progressWrapper');
@@ -42,122 +69,40 @@ function Skills() {
 						</Grid>
 					</Grid>
 					<Grid container spacing={3} sx={{ flexGrow: 1 }}>
-						<Grid item md={3}>
-							<Card
-								sx={{
-									backgroundColor: theme.palette.bodyColor,
-									textAlign: 'center',
-									boxShadow:
-										'0px 18px 39.1px 6.9px rgb(224 241 255 / 34%)',
-									position: 'relative',
-								}}>
-								<CardMedia
-									className='progressWrapper'
-									datacolor='#fdb157'
-									sx={{ position: 'relative' }}>
-									<Typography
-										component='div'
-										className='wave'
-										dataprogressbar='90%'></Typography>
-								</CardMedia>
-								<CardContent>
-									<Typography
-										component='h4'
-										variant='h4'
-										fontWeight='bold'
-										color={theme.palette.text.dark}>
-										Web Design (90%)
-									</Typography>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item md={3}>
-							<Card
-								sx={{
-									backgroundColor: theme.palette.bodyColor,
-									textAlign: 'center',
-									boxShadow:
-										'0px 18px 39.1px 6.9px rgb(224 241 255 / 34%)',
-									position: 'relative',
-								}}>
-								<CardMedia
-									className='progressWrapper'
-									datacolor='#9473e6'
-									sx={{ position: 'relative' }}>
-									<Typography
-										component='div'
-										className='wave'
-										dataprogressbar='60%'></Typography>
-								</CardMedia>
-								<CardContent>
-									<Typography
-										component='h4'
-										variant='h4'
-										fontWeight='bold'
-										color={theme.palette.text.dark}>
-										Logo Design (60%)
-									</Typography>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item md={3}>
-							<Card
-								sx={{
-									backgroundColor: theme.palette.bodyColor,
-									textAlign: 'center',
-									boxShadow:
-										'0px 18px 39.1px 6.9px rgb(224 241 255 / 34%)',
-									position: 'relative',
-								}}>
-								<CardMedia
-									className='progressWrapper'
-									datacolor='#bdecf6'
-									sx={{ position: 'relative' }}>
-									<Typography
-										component='div'
-										className='wave'
-										dataprogressbar='80%'></Typography>
-								</CardMedia>
-								<CardContent>
-									<Typography
-										component='h4'
-										variant='h4'
-										fontWeight='bold'
-										color={theme.palette.text.dark}>
-										After Effects (80%)
-									</Typography>
-								</CardContent>
-							</Card>
-						</Grid>
-						<Grid item md={3}>
-							<Card
-								sx={{
-									backgroundColor: theme.palette.bodyColor,
-									textAlign: 'center',
-									boxShadow:
-										'0px 18px 39.1px 6.9px rgb(224 241 255 / 34%)',
-									position: 'relative',
-								}}>
-								<CardMedia
-									className='progressWrapper'
-									datacolor='#ffbcaa'
-									sx={{ position: 'relative' }}>
-									<Typography
-										component='div'
-										className='wave'
-										dataprogressbar='70%'></Typography>
-								</CardMedia>
-								<CardContent>
-									<Typography
-										component='h4'
-										variant='h4'
-										fontWeight='bold'
-										color={theme.palette.text.dark}>
-										Web App (70%)
-									</Typography>
-								</CardContent>
-							</Card>
-						</Grid>
+						{skillsData.map((skill) => (
+							<Grid item md={3} key={skill.id}>
+								<Card
+									sx={{
+										backgroundColor:
+											theme.palette.bodyColor,
+										textAlign: 'center',
+										boxShadow:
+											'0px 18px 39.1px 6.9px rgb(224 241 255 / 34%)',
+										position: 'relative',
+									}}>
+									<CardMedia
+										className='progressWrapper'
+										datacolor={skill.color}
+										sx={{ position: 'relative' }}>
+										<Typography
+											component='div'
+											className='wave'
+											dataprogressbar={
+												skill.progress
+											}></Typography>
+									</CardMedia>
+									<CardContent>
+										<Typography
+											component='h4'
+											variant='h4'
+											fontWeight='bold'
+											color={theme.palette.text.dark}>
+											{skill.title}
+										</Typography>
+									</CardContent>
+								</Card>
+							</Grid>
+						))}
 					</Grid>
 				</Container>
 			</Box>
