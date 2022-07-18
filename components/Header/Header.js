@@ -47,7 +47,6 @@ function Header() {
 							href='#'
 							underline='none'
 							variant='h6'
-							className={styles.mobileMenuItemLink}
 							sx={{
 								textTransform: 'uppercase',
 								fontSize: '15px',
@@ -77,7 +76,7 @@ function Header() {
 		const { children, window } = props;
 		const trigger = useScrollTrigger({
 			// disableHysteresis: true,
-			// threshold: 0,
+			// threshold: 100,
 			target: window ? window() : undefined,
 		});
 

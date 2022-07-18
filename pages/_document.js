@@ -9,12 +9,17 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang='en'>
 				<Head>
+					<title>The Soul</title>
+					<meta
+						name='description'
+						content='The Soul is a personal portfolio app'
+					/>
 					<meta
 						name='theme-color'
 						content={lightTheme.palette.primary.main}
 					/>
-					<link rel='shortcut icon' href='./favicon.ico' />
-					<script src='../scripts/parallax.js'></script>
+					<link rel='icon' href='/favicon.ico' />
+					<script src='./scripts/parallax.js'></script>
 					{/* Inject MUI styles first to match with the prepend: true configuration. */}
 					{this.props.emotionStyleTags}
 				</Head>
