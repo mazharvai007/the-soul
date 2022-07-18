@@ -47,6 +47,7 @@ function Header() {
 							href='#'
 							underline='none'
 							variant='h6'
+							className={styles.mobileMenuItemLink}
 							sx={{
 								textTransform: 'uppercase',
 								fontSize: '15px',
@@ -99,14 +100,10 @@ function Header() {
 					sx={{
 						'&.mainNav': {
 							padding: '15px 100px',
+							zIndex: 1100,
 						},
 					}}>
-					<Toolbar
-						disableGutters
-						sx={{
-							display: 'flex',
-							justifyContent: 'space-between',
-						}}>
+					<Toolbar disableGutters className={styles.toolbar}>
 						<Logo variant='h6' component='a' href='/'>
 							<img src='images/logo.png' alt='the soul' />
 						</Logo>
@@ -140,17 +137,8 @@ function Header() {
 											color={
 												lightTheme.palette.text.white
 											}
-											underline='none'
 											variant='h6'
-											sx={{
-												textTransform: 'uppercase',
-												fontSize: '15px',
-												fontWeight: '700',
-												transition: '0.2s ease',
-												':hover': {
-													color: 'rgba(255,255,255,.5)',
-												},
-											}}>
+											className={styles.mainMenuItemLink}>
 											{page}
 										</Link>
 									</MenuItem>

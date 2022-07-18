@@ -5,7 +5,40 @@
 	padding-left: 130px;
 	padding-right: 130px;
 	transition: .3s ease;
-	// &.mainNav {
-	// 	padding: 15px 100px;
+	z-index: 1;
+
+	.toolbar {
+		display: flex;
+		justify-content: space-between
+	}
+
+	.mainMenuItemLink {
+		text-transform: uppercase;
+		font-size: 15px;
+		font-weight: 700;
+		transition: 0.2s ease;
+		text-decoration: none;
+		&:global(:hover) {
+			color: rgba(255,255,255,.5);
+		}
+	}
+
+	// .mainMenuWrapper {
+	// @media (max-width: 767px) {
+	// 	display: none;
+	// }
+
+	// @media (min-width: 768px) {
+	// 	display: flex;
+	// }
+	// }
+
+	// .mobileMenuWrapper {
+	// 	@media (max-width: 767px) {
+	// 		display: flex;
+	// 	}
+	// 	@media (min-width: 768px) {
+	// 		display: none;
+	// 	}
 	// }
 }
