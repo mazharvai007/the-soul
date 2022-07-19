@@ -15,25 +15,12 @@
 		&:hover {
 			box-shadow: 0px 18px 40px 8px rgb(224 241 255 / 54%);
 		}
-		&:global(.active) {
-			svg {
-				fill: #fff !important;
-			}
-			h4, p {
-				color: #fff !important;
-			}
-		}
 		svg.cartIcon {
-			fill: #4c4c4c;
 			margin-bottom: 3rem;
 		}
 
 		.cardContent {
 			padding: 0;
-			
-			.cardDescription {
-				color: #4c4c4c;
-			}
 		}
 	}
 }

@@ -21,6 +21,9 @@ export const lightTheme = createTheme({
 		bodyColor: {
 			main: '#fff',
 		},
+		iconColor: {
+			main: '#c8d5ef',
+		},
 	},
 	typography: {
 		fontFamily: 'Roboto, Playfair Display',

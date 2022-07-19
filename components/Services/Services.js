@@ -13,7 +13,7 @@ const servicesList = [
 		icon: (
 			<PaletteOutlinedIcon
 				className={styles.cartIcon}
-				sx={{ fontSize: 45 }}
+				sx={{ fontSize: 45, color: lightTheme.palette.text.main }}
 			/>
 		),
 		title: 'UI Design',
@@ -26,7 +26,7 @@ const servicesList = [
 		icon: (
 			<PolylineOutlinedIcon
 				className={styles.cartIcon}
-				sx={{ fontSize: 45 }}
+				sx={{ fontSize: 45, color: lightTheme.palette.text.white }}
 			/>
 		),
 		title: 'UX Design',
@@ -39,7 +39,7 @@ const servicesList = [
 		icon: (
 			<InterestsOutlinedIcon
 				className={styles.cartIcon}
-				sx={{ fontSize: 45 }}
+				sx={{ fontSize: 45, color: lightTheme.palette.text.main }}
 			/>
 		),
 		title: 'Interaction Design',
@@ -85,19 +85,26 @@ function Services() {
 											variant='h4'
 											fontWeight='700'
 											marginBottom='1.5rem'
-											color={
-												lightTheme.palette.text.dark
-											}>
+											color={`${
+												service.id == 2
+													? lightTheme.palette.text
+															.white
+													: lightTheme.palette.text
+															.dark
+											}`}>
 											{service.title}
 										</Typography>
 										<Typography
-											className={styles.cardDescription}
 											component='p'
 											variant='body2'
 											fontWeight='400'
-											color={
-												lightTheme.palette.text.light
-											}>
+											color={`${
+												service.id == 2
+													? lightTheme.palette.text
+															.white
+													: lightTheme.palette.text
+															.main
+											}`}>
 											{service.description}
 										</Typography>
 									</CardContent>

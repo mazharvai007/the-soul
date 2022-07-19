@@ -17,7 +17,11 @@ const educationList = [
 		icon: (
 			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
-				sx={{ fontSize: 45 }}
+				sx={{
+					fontSize: 45,
+					backgroundColor: lightTheme.palette.bodyColor.main,
+					color: lightTheme.palette.iconColor.main,
+				}}
 			/>
 		),
 		year: 2006,
@@ -29,7 +33,11 @@ const educationList = [
 		icon: (
 			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
-				sx={{ fontSize: 45 }}
+				sx={{
+					fontSize: 45,
+					backgroundColor: lightTheme.palette.bodyColor.main,
+					color: lightTheme.palette.iconColor.main,
+				}}
 			/>
 		),
 		year: 2004,
@@ -41,7 +49,11 @@ const educationList = [
 		icon: (
 			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
-				sx={{ fontSize: 45 }}
+				sx={{
+					fontSize: 45,
+					backgroundColor: lightTheme.palette.bodyColor.main,
+					color: lightTheme.palette.iconColor.main,
+				}}
 			/>
 		),
 		year: 2000,
@@ -53,7 +65,11 @@ const educationList = [
 		icon: (
 			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
-				sx={{ fontSize: 45 }}
+				sx={{
+					fontSize: 45,
+					backgroundColor: lightTheme.palette.bodyColor.main,
+					color: lightTheme.palette.iconColor.main,
+				}}
 			/>
 		),
 		year: 1998,
