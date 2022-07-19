@@ -82,7 +82,7 @@ function Hero() {
 		<>
 			<Box
 				id='parallax'
-				className={styles.heroWrapper}
+				className={styles.wrapper}
 				sx={{
 					position: 'relative',
 					padding: '300px 0 200px',
@@ -119,7 +119,7 @@ function Hero() {
 				{imageItemList.map((item) => (
 					<SingleImage
 						key={item.id}
-						className={styles.hero}
+						className={styles.objectItem}
 						id={`layer${item.id}`}>
 						<img src={item.img} alt='The Soul' />
 					</SingleImage>

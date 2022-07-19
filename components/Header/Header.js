@@ -94,7 +94,7 @@ function Header() {
 		<>
 			<ElevationScroll>
 				<AppBar
-					className={styles.header}
+					className={styles.wrapper}
 					position='fixed'
 					sx={{
 						'&.mainNav': {

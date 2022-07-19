@@ -54,7 +54,7 @@ function Skills() {
 	});
 	return (
 		<>
-			<Box container className={styles.Wrapper}>
+			<Box container className={styles.wrapper}>
 				<Container>
 					<Grid className={styles.titleWrap}>
 						<Grid item>
@@ -78,11 +78,11 @@ function Skills() {
 											lightTheme.palette.bodyColor,
 									}}>
 									<CardMedia
-										className={styles.cardMedia}
+										className={`progressWrapper ${styles.cardMedia}`}
 										datacolor={skill.color}>
 										<Typography
 											component='div'
-											className={styles.cardMediaProgress}
+											className={`wave ${styles.cardMediaProgress}`}
 											dataprogressbar={
 												skill.progress
 											}></Typography>

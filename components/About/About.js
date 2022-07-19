@@ -6,14 +6,14 @@ import styles from '../../styles/About.module.scss';
 function About() {
 	return (
 		<>
-			<Grid container className={styles.aboutWrapper}>
+			<Grid container className={styles.wrapper}>
 				<Grid item md={7} sx={{ mx: 'auto' }}>
-					<Box className={styles.aboutInner}>
+					<Box className={styles.inner}>
 						<Typography
 							component='p'
 							variant='h4'
 							color={lightTheme.palette.text.dark}
-							className={styles.aboutText}>
+							className={styles.description}>
 							Lorem ipsum dolor sit amet, consectetur adipisicing
 							elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -28,7 +28,7 @@ function About() {
 							size='large'
 							href='#'
 							color={lightTheme.palette.text.primary}
-							className={styles.aboutButton}>
+							className={styles.button}>
 							Know More
 						</Typography>
 					</Box>
