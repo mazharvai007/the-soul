@@ -9,6 +9,12 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang='en'>
 				<Head>
+					<meta charSet='utf-8' />
+					<meta
+						name='viewport'
+						content='initial-scale=1.0, width=device-width'
+					/>
+					<link rel='icon' type='image/x-icon' href='/favicon.ico' />
 					<title>The Soul</title>
 					<meta
 						name='description'
@@ -18,7 +24,6 @@ export default class MyDocument extends Document {
 						name='theme-color'
 						content={lightTheme.palette.primary.main}
 					/>
-					<link rel='icon' href='/favicon.ico' />
 					<script src='./scripts/parallax.js'></script>
 					{/* Inject MUI styles first to match with the prepend: true configuration. */}
 					{this.props.emotionStyleTags}
