@@ -8,11 +8,6 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/.swc/
-/out/
-
 # production
 /build
 
