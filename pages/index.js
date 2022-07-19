@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import About from '../components/About/About';
+import Education from '../components/Education/Education';
 import Experience from '../components/Experience/Experience';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
@@ -16,6 +17,7 @@ export default function Home({ children }) {
 			<About />
 			<Skills />
 			<Experience />
+			<Education />
 		</>
 	);
 }

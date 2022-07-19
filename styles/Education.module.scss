@@ -1,0 +1,48 @@
+.wrapper {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+
+	.bgImage {
+		width: 100%;
+		position: absolute;
+		top: -300px;
+		left: 0;
+		z-index: -1;
+	}
+
+	.titleWrap {
+		margin-bottom: 80px;
+	}
+
+	.card {
+		box-shadow: none;
+		background-color: transparent;
+		display: flex;
+		gap: 45px;
+		flex-flow: row wrap;
+		align-items: center;
+		overflow: inherit;
+		margin-bottom: 80px;
+
+		.cardIcon {
+			background-color: #ffffff;
+			height: 100px;
+			width: 100px;
+			padding: 30px;
+			line-height: 100px;
+			text-align: center;
+			color: #c8d5ef;
+			border-radius: 50%;
+			box-shadow: 0px 18px 39.1px 6.9px rgb(224 241 255 / 34%);
+		}
+
+		.cardYear {
+			margin-bottom: 4px;
+		}
+
+		.cardContent {
+			padding: 0;
+		}
+	}
+}
