@@ -9,13 +9,13 @@ import {
 	Grid,
 	Typography,
 } from '@mui/material';
-import WorkspacePremiumIcon from '@mui/icons-material/WorkspacePremium';
+import WorkspacePremiumOutlinedIcon from '@mui/icons-material/WorkspacePremiumOutlined';
 
 const educationList = [
 	{
 		id: 1,
 		icon: (
-			<WorkspacePremiumIcon
+			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
 				sx={{ fontSize: 45 }}
 			/>
@@ -27,7 +27,7 @@ const educationList = [
 	{
 		id: 2,
 		icon: (
-			<WorkspacePremiumIcon
+			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
 				sx={{ fontSize: 45 }}
 			/>
@@ -39,7 +39,7 @@ const educationList = [
 	{
 		id: 3,
 		icon: (
-			<WorkspacePremiumIcon
+			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
 				sx={{ fontSize: 45 }}
 			/>
@@ -51,7 +51,7 @@ const educationList = [
 	{
 		id: 4,
 		icon: (
-			<WorkspacePremiumIcon
+			<WorkspacePremiumOutlinedIcon
 				className={styles.cardIcon}
 				sx={{ fontSize: 45 }}
 			/>

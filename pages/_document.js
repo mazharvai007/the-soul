@@ -10,12 +10,7 @@ export default class MyDocument extends Document {
 			<Html lang='en'>
 				<Head>
 					<meta charSet='utf-8' />
-					<meta
-						name='viewport'
-						content='initial-scale=1.0, width=device-width'
-					/>
 					<link rel='icon' type='image/x-icon' href='/favicon.ico' />
-					<title>The Soul</title>
 					<meta
 						name='description'
 						content='The Soul is a personal portfolio app'

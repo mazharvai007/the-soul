@@ -4,20 +4,19 @@ import Education from '../components/Education/Education';
 import Experience from '../components/Experience/Experience';
 import Header from '../components/Header/Header';
 import Hero from '../components/Hero/Hero';
+import Services from '../components/Services/Services';
 import Skills from '../components/Skills/Skills';
 
 export default function Home({ children }) {
 	return (
 		<>
-			<Head>
-				<title>The Soul</title>
-			</Head>
 			<Header />
 			<Hero />
 			<About />
 			<Skills />
 			<Experience />
 			<Education />
+			<Services />
 		</>
 	);
 }
