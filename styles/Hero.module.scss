@@ -1,0 +1,46 @@
+.wrapper {
+	.objectItem {
+		&:global(#layer0) {
+			bottom: 0;
+			left: 0;
+		}
+		&:global(#layer1) {
+		  top: 190px;
+		  left: -250px;
+		}
+		&:global(#layer2) {
+		  top: 200px;
+		  left: 40%;
+		}
+		
+		&:global(#layer3) {
+		  top: 200px;
+		  right: 40%;
+		}
+		
+		&:global(#layer4) {
+		  top: 100px;
+		  right: -150px;
+		}
+		
+		&:global(#layer5) {
+		  bottom: -20px;
+		  left: 10%;
+		}
+		
+		&:global(#layer6) {
+		  bottom: 100px;
+		  left: 20%;
+		}
+		
+		&:global(#layer7) {
+		  bottom: 160px;
+		  right: 45%;
+		}
+		
+		&:global(#layer8) {
+		  bottom: 100px;
+		  right: -10px;
+		}
+	}
+}

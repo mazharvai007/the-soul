@@ -13,7 +13,8 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import styled from '@emotion/styled';
-import { theme } from '../../theme';
+import { lightTheme } from '../../styles/theme/lightTheme';
+import styles from '../../styles/Header.module.scss';
 
 const pages = ['Home', 'About', 'Blog', 'Portfolio', 'Contact'];
 
@@ -75,7 +76,7 @@ function Header() {
 		const { children, window } = props;
 		const trigger = useScrollTrigger({
 			// disableHysteresis: true,
-			// threshold: 0,
+			// threshold: 100,
 			target: window ? window() : undefined,
 		});
 
@@ -93,24 +94,15 @@ function Header() {
 		<>
 			<ElevationScroll>
 				<AppBar
+					className={styles.wrapper}
 					position='fixed'
 					sx={{
-						boxShadow: 'none',
-						paddingTop: '40px',
-						paddingBottom: '40px',
-						paddingLeft: '130px',
-						paddingRight: '130px',
-						transition: '.3s ease',
 						'&.mainNav': {
 							padding: '15px 100px',
+							zIndex: 1100,
 						},
 					}}>
-					<Toolbar
-						disableGutters
-						sx={{
-							display: 'flex',
-							justifyContent: 'space-between',
-						}}>
+					<Toolbar disableGutters className={styles.toolbar}>
 						<Logo variant='h6' component='a' href='/'>
 							<img src='images/logo.png' alt='the soul' />
 						</Logo>
@@ -141,18 +133,11 @@ function Header() {
 									<MenuItem key={page}>
 										<Link
 											href='#'
-											color={theme.palette.text.white}
-											underline='none'
+											color={
+												lightTheme.palette.text.white
+											}
 											variant='h6'
-											sx={{
-												textTransform: 'uppercase',
-												fontSize: '15px',
-												fontWeight: '700',
-												transition: '0.2s ease',
-												':hover': {
-													color: 'rgba(255,255,255,.5)',
-												},
-											}}>
+											className={styles.mainMenuItemLink}>
 											{page}
 										</Link>
 									</MenuItem>

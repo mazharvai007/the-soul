@@ -1,12 +1,12 @@
+import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { Box, Container, Typography } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
-import React from 'react';
-import { theme } from '../../theme';
-import './Hero.css';
+import { lightTheme } from '../../styles/theme/lightTheme';
+import styles from '../../styles/Hero.module.scss';
 
 const ImageLayer = styled.div({
 	position: 'absolute',
@@ -82,11 +82,11 @@ function Hero() {
 		<>
 			<Box
 				id='parallax'
+				className={styles.wrapper}
 				sx={{
 					position: 'relative',
 					padding: '300px 0 200px',
 					backgroundColor: 'primary.main',
-					overflow: 'hidden',
 				}}>
 				<Container>
 					<Box
@@ -100,7 +100,7 @@ function Hero() {
 							variant='h1'
 							component='h1'
 							fontWeight={700}
-							color={theme.palette.text.white}
+							color={lightTheme.palette.text.white}
 							sx={{
 								whiteSpace: 'pre-line',
 								position: 'relative',
@@ -118,10 +118,10 @@ function Hero() {
 				</ImageLayer>
 				{imageItemList.map((item) => (
 					<SingleImage
-						key={item.img}
-						className='layer'
+						key={item.id}
+						className={styles.objectItem}
 						id={`layer${item.id}`}>
-						<img src={item.img} alt={item.title} />
+						<img src={item.img} alt='The Soul' />
 					</SingleImage>
 				))}
 

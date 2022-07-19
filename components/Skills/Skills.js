@@ -8,8 +8,8 @@ import {
 	Grid,
 	Typography,
 } from '@mui/material';
-import { theme } from '../../theme';
-import './Skills.css';
+import { lightTheme } from '../../styles/theme/lightTheme';
+import styles from '../../styles/Skills.module.scss';
 
 const skillsData = [
 	{
@@ -54,16 +54,16 @@ function Skills() {
 	});
 	return (
 		<>
-			<Box container sx={{ paddingTop: '80px', paddingBottom: '80px' }}>
+			<Box container className={styles.wrapper}>
 				<Container>
-					<Grid sx={{ marginBottom: '80px' }}>
+					<Grid className={styles.titleWrap}>
 						<Grid item>
 							<Typography
 								component='h2'
 								variant='h2'
 								align='center'
 								fontWeight='700'
-								color={theme.palette.text.dark}>
+								color={lightTheme.palette.text.dark}>
 								Skills
 							</Typography>
 						</Grid>
@@ -72,21 +72,17 @@ function Skills() {
 						{skillsData.map((skill) => (
 							<Grid item md={3} key={skill.id}>
 								<Card
+									className={styles.card}
 									sx={{
 										backgroundColor:
-											theme.palette.bodyColor,
-										textAlign: 'center',
-										boxShadow:
-											'0px 18px 39.1px 6.9px rgb(224 241 255 / 34%)',
-										position: 'relative',
+											lightTheme.palette.bodyColor,
 									}}>
 									<CardMedia
-										className='progressWrapper'
-										datacolor={skill.color}
-										sx={{ position: 'relative' }}>
+										className={`progressWrapper ${styles.cardMedia}`}
+										datacolor={skill.color}>
 										<Typography
 											component='div'
-											className='wave'
+											className={`wave ${styles.cardMediaProgress}`}
 											dataprogressbar={
 												skill.progress
 											}></Typography>
@@ -96,7 +92,9 @@ function Skills() {
 											component='h4'
 											variant='h4'
 											fontWeight='bold'
-											color={theme.palette.text.dark}>
+											color={
+												lightTheme.palette.text.dark
+											}>
 											{skill.title}
 										</Typography>
 									</CardContent>

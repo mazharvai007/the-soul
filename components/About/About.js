@@ -1,26 +1,19 @@
 import { Box, Grid, Typography } from '@mui/material';
 import React from 'react';
-import { theme } from '../../theme';
+import { lightTheme } from '../../styles/theme/lightTheme';
+import styles from '../../styles/About.module.scss';
 
 function About() {
 	return (
 		<>
-			<Grid container sx={{ paddingTop: '80px', paddingBottom: '80px' }}>
+			<Grid container className={styles.wrapper}>
 				<Grid item md={7} sx={{ mx: 'auto' }}>
-					<Box
-						sx={{
-							textAlign: 'center',
-						}}>
+					<Box className={styles.inner}>
 						<Typography
 							component='p'
 							variant='h4'
-							color={theme.palette.text.dark}
-							sx={{
-								textAlign: 'center',
-								fontWeight: 'bold',
-								lineHeight: '1.8',
-								marginBottom: '16px',
-							}}>
+							color={lightTheme.palette.text.dark}
+							className={styles.description}>
 							Lorem ipsum dolor sit amet, consectetur adipisicing
 							elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -34,14 +27,8 @@ function About() {
 							component='a'
 							size='large'
 							href='#'
-							color={theme.palette.text.primary}
-							sx={{
-								textAlign: 'center',
-								padding: '16px 44px',
-								textDecoration: 'none',
-								display: 'inline-block',
-								fontWeight: 'bold',
-							}}>
+							color={lightTheme.palette.text.primary}
+							className={styles.button}>
 							Know More
 						</Typography>
 					</Box>
