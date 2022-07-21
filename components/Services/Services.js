@@ -52,7 +52,7 @@ const servicesList = [
 function Services() {
 	return (
 		<>
-			<Box className={styles.wrapper}>
+			<Box container className={styles.wrapper}>
 				<Container>
 					<Grid className={styles.titleWrap}>
 						<Grid item>
