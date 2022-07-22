@@ -97,7 +97,7 @@ function Testimonials() {
 		slidesToScroll: 1,
 		autoplay: true,
 		dots: true,
-		speed: 300,
+		speed: 1000,
 		adaptiveHeight: true,
 		dotsClass: `${styles.testiDots}`,
 		arrows: false,

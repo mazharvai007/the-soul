@@ -55,6 +55,7 @@ function ClientSlider() {
 		slidesToShow: 5,
 		slidesToScroll: 1,
 		autoplay: true,
+		speed: 500,
 		dots: false,
 		arrows: false,
 		responsive: [

@@ -112,6 +112,7 @@ function Hero() {
 				</Container>
 				<ImageLayer>
 					<img
+						width='100%'
 						src='images/illustrations/leaf-bg.png'
 						alt='the soul'
 					/>
