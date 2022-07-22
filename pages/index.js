@@ -7,6 +7,7 @@ import Hero from '../components/Hero/Hero';
 import Portfolio from '../components/Portfolio/Portfolio';
 import Services from '../components/Services/Services';
 import Skills from '../components/Skills/Skills';
+import Testimonials from '../components/Testimonials/Testimonials';
 
 export default function Home({ children }) {
 	return (
@@ -19,6 +20,7 @@ export default function Home({ children }) {
 			<Education />
 			<Services />
 			<Portfolio />
+			<Testimonials />
 		</>
 	);
 }
