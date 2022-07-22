@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import About from '../components/About/About';
+import ClientSlider from '../components/ClientSlider/ClientSlider';
 import Education from '../components/Education/Education';
 import Experience from '../components/Experience/Experience';
 import Header from '../components/Header/Header';
@@ -21,6 +22,7 @@ export default function Home({ children }) {
 			<Services />
 			<Portfolio />
 			<Testimonials />
+			<ClientSlider />
 		</>
 	);
 }

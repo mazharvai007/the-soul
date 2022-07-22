@@ -97,38 +97,10 @@ function Testimonials() {
 		slidesToScroll: 1,
 		autoplay: true,
 		dots: true,
+		speed: 300,
+		adaptiveHeight: true,
 		dotsClass: `${styles.testiDots}`,
 		arrows: false,
-		responsive: [
-			{
-				breakpoint: 1024,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-			{
-				breakpoint: 600,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-			{
-				breakpoint: 480,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-			{
-				breakpoint: 400,
-				settings: {
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				},
-			},
-		],
 	};
 
 	return (
