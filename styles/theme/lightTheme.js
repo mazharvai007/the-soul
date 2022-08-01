@@ -1,5 +1,4 @@
 import { createTheme } from '@mui/material';
-import { lineHeight } from '@mui/system';
 
 export const lightTheme = createTheme({
 	palette: {
@@ -73,6 +72,12 @@ export const lightTheme = createTheme({
 			fontFamily: 'Playfair Display, serif',
 			fontSize: '15px',
 			lineHeight: 1.5,
+		},
+		formText: {
+			fontWeight: 400,
+			fontSize: '16px',
+			lineHeight: 1.5,
+			fontFamily: 'Roboto, sans-serif',
 		},
 	},
 	breakpoints: {
