@@ -74,6 +74,11 @@ export const lightTheme = createTheme({
 			fontSize: '15px',
 			lineHeight: 1.5,
 		},
+		menu: {
+			fontFamily: 'Playfair Display, serif',
+			fontSize: '15px',
+			lineHeight: 1.5,
+		},
 		formText: {
 			fontWeight: 400,
 			fontSize: '16px',

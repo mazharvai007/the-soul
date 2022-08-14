@@ -41,7 +41,7 @@ function Contact() {
 						sx={{
 							backgroundColor: lightTheme.palette.bodyColor.main,
 						}}>
-						<Grid item md={12}>
+						<Grid item md={12} width='100%'>
 							<Typography
 								variant='h4'
 								component='h4'
@@ -58,7 +58,7 @@ function Contact() {
 							method='POST'
 							onSubmit={handleSubmit(onSubmit)}>
 							<Grid container spacing={4}>
-								<Grid item md={6}>
+								<Grid item md={6} width='100%'>
 									<input
 										className={styles.formField}
 										style={lightTheme.typography.formText}

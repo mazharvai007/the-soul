@@ -122,7 +122,7 @@ function Testimonials() {
 							</Typography>
 						</Grid>
 					</Grid>
-					<Grid container spacing={3} sx={{ flexGrow: 1 }}>
+					<Grid sx={{ flexGrow: 1 }}>
 						<Slider
 							{...settings}
 							className={styles.sliderContainer}>

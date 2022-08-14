@@ -70,7 +70,15 @@ function Skills() {
 					</Grid>
 					<Grid container spacing={3} sx={{ flexGrow: 1 }}>
 						{skillsData.map((skill) => (
-							<Grid item md={3} key={skill.id}>
+							<Grid
+								item
+								md={3}
+								key={skill.id}
+								sx={{
+									[lightTheme.breakpoints.only('xs')]: {
+										width: '100%',
+									},
+								}}>
 								<Card
 									className={styles.card}
 									sx={{

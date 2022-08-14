@@ -65,6 +65,7 @@ function Blogs() {
 								<Card className={styles.card}>
 									<CardMedia>
 										<img
+											width='100%'
 											src={item.image}
 											alt={item.title}
 										/>

@@ -12,14 +12,22 @@
 		justify-content: space-between
 	}
 
-	.mainMenuItemLink {
-		text-transform: uppercase;
-		font-size: 15px;
-		font-weight: 700;
-		transition: 0.2s ease;
-		text-decoration: none;
-		&:global(:hover) {
-			color: rgba(255,255,255,.5);
+	.mainMenu {
+		list-style: none;
+		display: flex;
+		li {
+			.menuItemLink {
+				text-transform: uppercase;
+				font-size: 15px;
+				font-weight: 700;
+				transition: 0.2s ease;
+				text-decoration: none;
+				cursor: pointer;
+				padding: 15px;
+				&:global(:hover) {
+					color: rgba(255,255,255,.5);
+				}
+			}
 		}
 	}
 }

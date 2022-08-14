@@ -54,7 +54,7 @@ function ClientSlider() {
 		infinite: true,
 		slidesToShow: 5,
 		slidesToScroll: 1,
-		autoplay: true,
+		autoplay: false,
 		speed: 500,
 		dots: false,
 		arrows: false,
@@ -83,7 +83,7 @@ function ClientSlider() {
 			{
 				breakpoint: 400,
 				settings: {
-					slidesToShow: 1,
+					slidesToShow: 2,
 					slidesToScroll: 1,
 				},
 			},

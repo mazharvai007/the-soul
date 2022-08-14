@@ -7,8 +7,19 @@
 		margin-bottom: 80px;
 	}
 
-	.sliderContainer {max-width: 100vw;width: 100%;text-align: center;}
+	.sliderContainer {
+		max-width: 100vw;
+		width: 100%;
+		text-align: center;
+		@media screen and (max-width: 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 	.item{
+		@media screen and (max-width: 767px) {
+			width: 100% !important;
+		}
 		width: 920px !important;
 		.testiMedia {
 			margin: 0 auto; border-radius: 50%;margin-bottom: 1.5rem;
@@ -43,6 +54,9 @@
 	}
 
 	.bgShapes {
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
 		&:global(#bgShape1) {
 			position: absolute;
 			left: 50%;

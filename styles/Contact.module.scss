@@ -31,6 +31,15 @@
 		textarea {
 			height: 120px !important;
 		}
-		.submitButton {padding: 16px 44px;font-size: 22px;font-weight: 600;width: 50%;}
+		.submitButton {
+			padding: 16px 44px;
+			font-size: 22px;
+			font-weight: 600;
+
+			@media screen and (max-width: 767px) {
+				width: 80%;
+			}
+			width: 50%;
+		}
 	}
 }
