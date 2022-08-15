@@ -1,0 +1,64 @@
+.wrapper {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+
+	.titleWrap {
+		margin-bottom: 80px;
+	}
+
+	.item {
+		position: relative;
+		overflow: hidden;
+		border-radius: .25rem;
+
+		img {
+			transition: .3s ease;
+			transform: scale(1.1);
+			border-radius: .25rem;
+		}
+
+		&:hover {
+			img {
+				transform: scale(1);
+			}
+
+			.hoverOverlay {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	.hoverOverlay {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border-radius: inherit;
+		top: 0;
+		left: 0;
+		background: rgba(0, 0, 0, 0.3);
+		opacity: 0;
+		visibility: hidden;
+		transition: .3s ease;
+	}
+
+	.hoverContent {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+
+	.itemButton {
+		text-transform: capitalize;
+		font-weight: 700;
+		&:hover {
+			color: #212529;
+			background-color: #e2e6ea;
+			border-color: #dae0e5;
+		}
+	}
+}

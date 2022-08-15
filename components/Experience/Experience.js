@@ -38,7 +38,10 @@ const experienceList = [
 function Experience() {
 	return (
 		<>
-			<Box container className={styles.wrapper}>
+			<Box
+				container
+				className={styles.wrapper}
+				bgcolor={lightTheme.palette.bodyColor}>
 				<Container>
 					<Grid className={styles.titleWrap}>
 						<Grid item>

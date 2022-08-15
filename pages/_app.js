@@ -25,6 +25,8 @@ export default function MyApp(props) {
 					name='viewport'
 					content='initial-scale=1, width=device-width'
 				/>
+				<link rel='icon' type='image/x-icon' href='/favicon.ico' />
+				<title>The Soul</title>
 			</Head>
 			<ThemeProvider theme={lightTheme}>
 				<CssBaseline />

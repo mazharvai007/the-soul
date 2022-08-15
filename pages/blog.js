@@ -11,7 +11,7 @@ export default function Blog() {
 				/>
 				<link rel='icon' href='%PUBLIC_URL%/favicon.ico' />
 			</Head>
-			<h1>Blog</h1>;
+			<h1>Blog</h1>
 		</>
 	);
 }

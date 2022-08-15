@@ -17,6 +17,9 @@ const ImageLayer = styled.div({
 const SingleImage = styled.div({
 	position: 'absolute',
 	zIndex: 1,
+	[lightTheme.breakpoints.only('xs')]: {
+		display: 'none',
+	},
 });
 
 const SocialIconList = styled.div({
@@ -85,7 +88,10 @@ function Hero() {
 				className={styles.wrapper}
 				sx={{
 					position: 'relative',
-					padding: '300px 0 200px',
+					padding: {
+						sm: '300px 0 200px',
+						xs: '100px 0 100px',
+					},
 					backgroundColor: 'primary.main',
 				}}>
 				<Container>
@@ -105,6 +111,9 @@ function Hero() {
 								whiteSpace: 'pre-line',
 								position: 'relative',
 								zIndex: 2,
+								fontSize: {
+									xs: '70px',
+								},
 							}}>
 							{`Hi! I'am \n Charlotte \n UX designer`}
 						</Typography>
@@ -112,6 +121,7 @@ function Hero() {
 				</Container>
 				<ImageLayer>
 					<img
+						width='100%'
 						src='images/illustrations/leaf-bg.png'
 						alt='the soul'
 					/>

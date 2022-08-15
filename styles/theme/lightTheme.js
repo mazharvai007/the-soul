@@ -15,11 +15,15 @@ export const lightTheme = createTheme({
 			secondary: '#2bfdff',
 			white: '#ffffff',
 			gray: '#eaeaea',
-			dark: '#000',
+			black: '#000',
+			dark: '#222',
 			light: '#999999',
 		},
 		bodyColor: {
 			main: '#fff',
+		},
+		iconColor: {
+			main: '#c8d5ef',
 		},
 	},
 	typography: {
@@ -64,6 +68,22 @@ export const lightTheme = createTheme({
 			lineHeight: 1.2,
 			fontSize: '14px',
 			fontFamily: 'Playfair Display, serif',
+		},
+		button: {
+			fontFamily: 'Playfair Display, serif',
+			fontSize: '15px',
+			lineHeight: 1.5,
+		},
+		menu: {
+			fontFamily: 'Playfair Display, serif',
+			fontSize: '15px',
+			lineHeight: 1.5,
+		},
+		formText: {
+			fontWeight: 400,
+			fontSize: '16px',
+			lineHeight: 1.5,
+			fontFamily: 'Roboto, sans-serif',
 		},
 	},
 	breakpoints: {

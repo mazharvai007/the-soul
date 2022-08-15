@@ -1,10 +1,11 @@
-:root {
-	--primary: #41228e;
-	--secondary: #2bfdff;
-	
-}
-
 body {
 	background-color: #fff;
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		padding: 0 !important;
+	}
 }

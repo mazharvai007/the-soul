@@ -1,0 +1,25 @@
+.wrapper {
+	padding-top: 200px;
+	position: relative;
+
+	.infoWrapper {
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	.infoItem {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	.copyright {
+		padding-top: 3rem;
+		padding-bottom: 3rem;
+		text-align: center;
+		border-top-width: 1px;
+		border-bottom-width: 0;
+		border-left-width: 0;
+		border-right-width: 0;
+		border-style: solid;
+	}
+}

@@ -1,0 +1,26 @@
+.wrapper {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+
+	.titleWrap {
+		margin-bottom: 80px;
+	}
+
+	.card {
+		box-shadow: 0px 18px 39.1px 6.9px rgb(224 241 255 / 34%);
+		text-align: center;
+		transition: 0.2s ease;
+		padding: 3rem 1.5rem;
+		&:hover {
+			box-shadow: 0px 18px 40px 8px rgb(224 241 255 / 54%);
+		}
+		svg.cartIcon {
+			margin-bottom: 3rem;
+		}
+
+		.cardContent {
+			padding: 0;
+		}
+	}
+}

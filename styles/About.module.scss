@@ -4,6 +4,10 @@
 	
 	.inner {
 		text-align: center;
+		@media screen and (max-width: 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
 	}
 
 	.description {

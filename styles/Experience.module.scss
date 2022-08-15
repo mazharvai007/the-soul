@@ -1,6 +1,7 @@
 .wrapper {
 	padding-top: 80px;
 	padding-bottom: 80px;
+	position: relative;
 
 	.titleWrap {
 		margin-bottom: 80px;
@@ -10,6 +11,7 @@
 		box-shadow: none;
 		text-align: center;
 		margin: auto;
+		background-color: transparent;
 
 		.cardMedia {
 			width: 110px;
