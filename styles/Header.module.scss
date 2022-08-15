@@ -1,0 +1,33 @@
+.wrapper {
+	box-shadow: none;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	padding-left: 130px;
+	padding-right: 130px;
+	transition: .3s ease;
+	z-index: 1;
+
+	.toolbar {
+		display: flex;
+		justify-content: space-between
+	}
+
+	.mainMenu {
+		list-style: none;
+		display: flex;
+		li {
+			.menuItemLink {
+				text-transform: uppercase;
+				font-size: 15px;
+				font-weight: 700;
+				transition: 0.2s ease;
+				text-decoration: none;
+				cursor: pointer;
+				padding: 15px;
+				&:global(:hover) {
+					color: rgba(255,255,255,.5);
+				}
+			}
+		}
+	}
+}

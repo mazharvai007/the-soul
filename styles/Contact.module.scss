@@ -1,0 +1,45 @@
+.wrapper {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+	margin-bottom: -250px;
+	background-image: url('../public/images/backgrounds/bg-dots.png');
+	z-index: 1;
+
+	.titleWrap {
+		margin-bottom: 80px;
+	}
+
+	.contactForm {
+		padding: 3rem;
+		border-radius: .25rem;
+
+		.formField {
+			border: 0;
+			border-radius: 0;
+			border-bottom: 1px solid #c7c7c7;
+			height: 60px; 
+			width: 100%;
+			&:focus {
+				outline: none;
+			}
+
+			.MuiInputLabel-formControl {
+				margin-top: 0;
+			}
+		}
+		textarea {
+			height: 120px !important;
+		}
+		.submitButton {
+			padding: 16px 44px;
+			font-size: 22px;
+			font-weight: 600;
+
+			@media screen and (max-width: 767px) {
+				width: 80%;
+			}
+			width: 50%;
+		}
+	}
+}

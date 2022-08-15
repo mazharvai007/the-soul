@@ -1,0 +1,56 @@
+.wrapper {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+
+	.bgImage {
+		width: 100%;
+		position: absolute;
+		top: -300px;
+		left: 0;
+		z-index: -1;
+	}
+
+	.titleWrap {
+		margin-bottom: 80px;
+	}
+
+	.card {
+		box-shadow: none;
+		background-color: transparent;
+		display: flex;
+		
+		
+		align-items: center;
+		overflow: inherit;
+		margin-bottom: 80px;
+
+		@media screen and (max-width: 767px) {
+			flex-flow: inherit;
+			gap: 18px;
+		}
+
+		@media screen and (min-width: 768px) {
+			flex-flow: row wrap;
+			gap: 45px;
+		}
+
+		.cardIcon {
+			height: 100px;
+			width: 100px;
+			padding: 30px;
+			line-height: 100px;
+			text-align: center;
+			border-radius: 50%;
+			box-shadow: 0px 18px 39.1px 6.9px rgb(224 241 255 / 34%);
+		}
+
+		.cardYear {
+			margin-bottom: 4px;
+		}
+
+		.cardContent {
+			padding: 0;
+		}
+	}
+}

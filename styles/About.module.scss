@@ -1,0 +1,27 @@
+.wrapper {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	
+	.inner {
+		text-align: center;
+		@media screen and (max-width: 767px) {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+
+	.description {
+		text-align: center;
+		font-weight: bold;
+		line-height: 1.8;
+		margin-bottom: 16px;
+	}
+
+	.button {
+		text-align: center;
+		padding: 16px 44px;
+		text-decoration: none;
+		display: inline-block;
+		font-weight: bold;
+	}
+}
